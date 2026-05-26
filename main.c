@@ -20,29 +20,19 @@ int main()
     // input of mass
     fputs("Initial mass in grams: ", stdout);
 
-    // Checks if user typed negative number
-    // It works by checking the presence of '-', counts how many '-' user typed and store it to variable n.
-    // n will have the value of the count of '-', then exits with code 1.
-    int n = 0;
-    scanf(" -%n", &n);
-    if (n > 0) return 1;
-
-    // Checks the data type of the input and exits if it's not a number.
-    if(scanf("%f", &initial_mass) != 1){
+    // Checks the data type of the input and exits if it's not a number OR if the input is a negative number.
+    if(scanf("%f", &initial_mass) != 1 || initial_mass < 0){
         return 1;
     }
     
     // input of duration in days
-    fputs("Duration in days: ", stdout);
-    
-    scanf(" -%n", &n);
-    if (n > 0) return 1;
+    fputs("Elapsed time in days: ", stdout);
 
-    if(scanf("%d", &days) != 1){
+    if(scanf("%d", &days) != 1 || days < 0){
         return 1;
     }
     
-    printf("Remaining mass: %f\n", half_life(initial_mass, days));
+    printf("Remaining mass in grams: %f\n", half_life(initial_mass, days));
     // prints out final mass after duration
 
     return 0;
@@ -55,7 +45,7 @@ float half_life(float N0, int t){
     // N(t) = N0 * (1/2)^n;
     // N(t) = N0 * (1/2)^t/t_half;
 
-    float n = (t/t_half);
+    float n = ((float)t/t_half);
     float HALF_ratio = pow(0.5, n);
     float N_of_t = N0*HALF_ratio;
 
