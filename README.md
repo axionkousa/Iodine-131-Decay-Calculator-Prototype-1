@@ -1,8 +1,8 @@
 # Iodine-131-Half-Life-Simulation-Prototype-1
 
-This is a CLI simulation (or rather a _calculator_) to determine the final mass of the substance iodine-131 after a period of elapsed time.
+A CLI simulation (or rather a _calculator_) to determine the final mass of the substance iodine-131 after a period of elapsed time.
 
-## Keynote to know.
+## Keynote to know
 - Iodine-131 has a half-life of 8 days.
 
 ## How does it work?
@@ -18,7 +18,7 @@ $$N(t) = N_0 \left(\frac{1}{2}\right)^{\frac{t}{t_{1/2}}}$$
 Finally, it prints out the final amount of mass remaining.
 
 ## How to use it?
-1. Run the 'main' file by './main' on your terminal
-2. Enter the initial mass (e.g. '10' for 10 grams)
-3. Enter the elapsed time (e.g. '16' for 16 days)
+1. Run the `main` file by `./main` on your terminal
+2. Enter the initial mass (e.g. `10` for 10 grams)
+3. Enter the elapsed time (e.g. `16` for 16 days)
 4. Read the output
