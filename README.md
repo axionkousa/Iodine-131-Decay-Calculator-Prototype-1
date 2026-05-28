@@ -1,4 +1,4 @@
-# Iodine-131-Half-Life-Simulation-Prototype-1
+# Iodine-131-Decay-Calculator-Prototype-1
 
 A CLI simulation (or rather a _calculator_) to determine the final mass of the substance iodine-131 after a period of elapsed time.
 
